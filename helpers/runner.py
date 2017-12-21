@@ -23,7 +23,7 @@ class Main:
 
     @classmethod
     def add_user_expenses(cls):
-        expense_type = str(raw_input("Enter Expense Type: ")).strip()
+        expense_type = str(raw_input("Enter Expense Type: ")).strip().replace(" ", "_")
         expense_amount = int(raw_input("Enter the monthly expense amount: $"))
 
         cls.user.add_expense(expense_type, expense_amount)
